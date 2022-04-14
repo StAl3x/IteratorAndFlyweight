@@ -64,4 +64,9 @@ public class Restaurant {
     public void setCuisine(String cuisine) {
         this.cuisine = cuisine;
     }
+
+    @Override
+    public String toString(){
+        return name+ "       " + rating+ "/10       " + busyRate+"/10       " + cuisine;
+    }
 }

@@ -1,6 +1,7 @@
 package gui;
 
 import dal.MockData;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
@@ -20,7 +21,8 @@ public class MainViewController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         mockData = new MockData();
-        ltvAllRestaurants.setItems((ObservableList) mockData.getAllRestaurants());
+        mockData.initMockData();
+        ltvAllRestaurants.setItems(FXCollections.observableList(mockData.getAllRestaurants()));
 
     }
 

@@ -2,6 +2,7 @@ package dal;
 
 import be.Restaurant;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MockData {
@@ -18,6 +19,7 @@ public class MockData {
     private Restaurant restaurant10;
 
     public void initMockData() {
+        allRestaurants = new ArrayList<>();
         restaurant1 = new Restaurant("Phos", 40, 20, 7.5, 9, "Korean");
         restaurant2 = new Restaurant("Lorenzo", 150, 100, 9.8, 10, "Italian");
         restaurant3 = new Restaurant("BurgeRista", 20, 180, 6.6, 7, "Burgers");
@@ -42,7 +44,7 @@ public class MockData {
     }
 
     public List<Restaurant> getAllRestaurants(){
-        return this.allRestaurants;
+        return allRestaurants;
     }
 
 }
